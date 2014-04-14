@@ -74,8 +74,27 @@ def area(n,length):
 #area(7,3)
 
 
-def rpsls(name):
+#def rpsls(name):
   
     
-print rpsls("rock")
+#print rpsls("rock")
+
+guate = "Guatemala is awasome"
+
+print """heye what thf sdfasdfas %s"""%guate
+
+###
+wikientries = db.GqlQuery("""SELECT * 
+                            FROM WikiEntry
+                            WHERE title='%s'
+                            ORDER BY
+                            created DESC
+                            """%wikititle)
+if wikientries:
+  lastentry=wikientries[0]
+  
+if wikientries==False:
+  self.redirect("/wiki/_edit"+wikititle)
+  
+
 
